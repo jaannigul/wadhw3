@@ -1,11 +1,59 @@
-<script setup>
-
-</script>
-
 <template>
+<header class="header">
+    
+    <ul class = 'nav'>
+        <li><router-link to="/register"  class="nav-link">Register</router-link></li>
+        <li><router-link to ="/post"  class="nav-link">Posts</router-link></li>
+    </ul>
 
+</header>
 </template>
 
+<script>
+    export default {
+    name: "getHeader",
+}
+</script>
 <style scoped>
+.header{
+    top: 0;
+    position: sticky;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 1px solid #938f8f;
+    margin-top: 0px;
+    background-image: linear-gradient(0,#86A789,#405041);/* #86A789*/
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.75);
+    border-radius: 15px;
+    width: 100%;
+    
+    
+}
+.nav{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+}
+.nav a:hover {
+    background-color: rgb(196, 185, 185);
+}
 
+.nav a {
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    color: #000000;
+    font-size: .99em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+ul.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
 </style>
