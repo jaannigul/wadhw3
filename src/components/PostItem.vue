@@ -10,7 +10,10 @@
       <img v-if="post.image_url" :src="post.image_url" alt="Post image" />
     </div>
     <div class="post footer">
-      <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
+      <button class = "like" @click="IncraeseLike(post)">
+        <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
+      </button>
+      <p>{{ post.likes}}</p>
     </div>
   </div>
   <div v-else>
@@ -31,11 +34,21 @@ export default {
     defaultImage() {
       return '/res/images/user.png';
     }
+  },
+  methods:{
+    IncraeseLike(post){
+      post.likes  = post.likes +1;
+    }
   }
+
 };
 </script>
 
 <style scoped>
+.like{
+  background: none;
+  border: none;
+}
 .postcontainer{
   background-color: #86A789;
   border-radius: 10px;

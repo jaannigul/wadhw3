@@ -5,7 +5,8 @@
     "image_url": null,
     "create_time": "2023-10-01",
     "user_picture": "https://pm1.aminoapps.com/7648/ab0c785ec28e1f13dc35380395cb070ccd0b3ce4r1-1080-1055v2_hq.jpg",
-    "username": "Toomas Tamm"
+    "username": "Toomas Tamm",
+    "likes":0
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "image_url": null,
     "create_time": "2023-10-04",
     "user_picture": "https://clasebcn.com/wp-content/uploads/2020/04/harold-thumb.jpg",
-    "username": "Peeter Põld"
+    "username": "Peeter Põld",
+    "likes":0
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "image_url": null,
     "create_time": "2023-11-02",
     "user_picture": "https://pm1.aminoapps.com/7648/ab0c785ec28e1f13dc35380395cb070ccd0b3ce4r1-1080-1055v2_hq.jpg",
-    "username": "Toomas Tamm"
+    "username": "Toomas Tamm",
+    "likes":0
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "image_url": "https://i.pinimg.com/originals/32/e1/fb/32e1fb59b631107f6f45307ccab219dc.jpg",
     "create_time": "2023-11-03",
     "user_picture": null,
-    "username": "Jüri Jurakas"
+    "username": "Jüri Jurakas",
+    "likes":0
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "image_url": "https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "create_time": "2023-11-05",
     "user_picture": null,
-    "username": "Mari Maasikas"
+    "username": "Mari Maasikas",
+    "likes":0
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "image_url": null,
     "create_time": "2023-11-07",
     "user_picture": null,
-    "username": "Mari Maasikas"
+    "username": "Mari Maasikas",
+    "likes":0
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "image_url": "https://baledoneen.com/wp-content/uploads/2017/04/FruitInfused-Water.jpg",
     "create_time": "2023-11-10",
     "user_picture": "https://clasebcn.com/wp-content/uploads/2020/04/harold-thumb.jpg",
-    "username": "Peeter Põld"
+    "username": "Peeter Põld",
+    "likes":0
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "image_url": null,
     "create_time": "2023-11-12",
     "user_picture": "https://example.com/images/user8.jpg",
-    "username": "Siim Sinilill"
+    "username": "Siim Sinilill",
+    "likes":0
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "image_url": "https://previews.123rf.com/images/utima/utima1405/utima140500068/28627576-fresh-fruit-slices-under-water.jpg",
     "create_time": "2023-11-15",
     "user_picture": null,
-    "username": "Kadri Kummaline"
+    "username": "Kadri Kummaline",
+    "likes":0
   },
   {
     "id": 10,
@@ -77,6 +86,7 @@
     "image_url": null,
     "create_time": "2023-11-17",
     "user_picture": null,
-    "username": "Tõnu Tank"
+    "username": "Tõnu Tank",
+    "likes":0
   }
 ]
