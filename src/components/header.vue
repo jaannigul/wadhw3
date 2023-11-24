@@ -56,4 +56,30 @@ ul.nav-list {
   margin: 0;
   display: flex;
 }
+@media(min-width: 768px){
+  .header, .nav{
+    display: flex;
+  }
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 767px){
+  .logoButton{
+    display: none;
+  }
+  .nav {
+    text-align: center;
+  }
+
+  .nav a {
+    padding: 10px;
+    font-size: 1em;
+  }
+  .header{
+    display: block;
+  }
+}
 </style>

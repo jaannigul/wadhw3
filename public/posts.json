@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "content": "lorem ipsum",
+    "image_url": null,
+    "create_time": "2023-10-01",
+    "user_picture": "https://pm1.aminoapps.com/7648/ab0c785ec28e1f13dc35380395cb070ccd0b3ce4r1-1080-1055v2_hq.jpg",
+    "username": "Toomas Tamm"
+  },
+  {
+    "id": 2,
+    "content": "lorem ipsum",
+    "image_url": null,
+    "create_time": "2023-10-04",
+    "user_picture": "https://clasebcn.com/wp-content/uploads/2020/04/harold-thumb.jpg",
+    "username": "Peeter Põld"
+  },
+  {
+    "id": 3,
+    "content": "Post 3",
+    "image_url": null,
+    "create_time": "2023-11-02",
+    "user_picture": "https://pm1.aminoapps.com/7648/ab0c785ec28e1f13dc35380395cb070ccd0b3ce4r1-1080-1055v2_hq.jpg",
+    "username": "Toomas Tamm"
+  },
+  {
+    "id": 4,
+    "content": "lorem ipsum",
+    "image_url": "https://i.pinimg.com/originals/32/e1/fb/32e1fb59b631107f6f45307ccab219dc.jpg",
+    "create_time": "2023-11-03",
+    "user_picture": null,
+    "username": "Jüri Jurakas"
+  },
+  {
+    "id": 5,
+    "content": "Made possible with myjson.online",
+    "image_url": "https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "create_time": "2023-11-05",
+    "user_picture": null,
+    "username": "Mari Maasikas"
+  },
+  {
+    "id": 6,
+    "content": "lorem ipsum",
+    "image_url": null,
+    "create_time": "2023-11-07",
+    "user_picture": null,
+    "username": "Mari Maasikas"
+  },
+  {
+    "id": 7,
+    "content": "lorem ipsum",
+    "image_url": "https://baledoneen.com/wp-content/uploads/2017/04/FruitInfused-Water.jpg",
+    "create_time": "2023-11-10",
+    "user_picture": "https://clasebcn.com/wp-content/uploads/2020/04/harold-thumb.jpg",
+    "username": "Peeter Põld"
+  },
+  {
+    "id": 8,
+    "content": "lorem ipsum 8",
+    "image_url": null,
+    "create_time": "2023-11-12",
+    "user_picture": "https://example.com/images/user8.jpg",
+    "username": "Siim Sinilill"
+  },
+  {
+    "id": 9,
+    "content": "lorem ipsum 9",
+    "image_url": "https://previews.123rf.com/images/utima/utima1405/utima140500068/28627576-fresh-fruit-slices-under-water.jpg",
+    "create_time": "2023-11-15",
+    "user_picture": null,
+    "username": "Kadri Kummaline"
+  },
+  {
+    "id": 10,
+    "content": "lorem ipsum 10",
+    "image_url": null,
+    "create_time": "2023-11-17",
+    "user_picture": null,
+    "username": "Tõnu Tank"
+  }
+]
