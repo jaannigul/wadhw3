@@ -72,7 +72,7 @@ html{
 
 }
 .column.center{
-  flex: 1;
+  flex: 2;
   padding-top: 10px;
   padding-bottom: 10px;
 

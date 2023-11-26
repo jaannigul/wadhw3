@@ -1,19 +1,21 @@
 <template>
   <div v-if="post" class="postcontainer">
     <div class="post heading">
-      <img :src="userPicture" class="pfp" alt="pfp" />
+      <img :src="userPicture" @error="setDefaultImage" class="pfp" alt="pfp"/>
       <h4 class="username">{{ post.username }}</h4>
       <p class="date">{{ post.create_time }}</p>
     </div>
     <div class="post content">
       <p>{{ post.content }}</p>
-      <img v-if="post.image_url" :src="post.image_url" alt="Post image" />
+      <img v-if="post.image_url" :src="post.image_url" alt="Post image"/>
     </div>
     <div class="post footer">
-      <button class="like" @click="IncraeseLike(post)">
-        <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
-      </button>
-      <p>{{ post.likes}}</p>
+      <div class=" like-container">
+        <button class="like" @click="incrementLike(post)">
+          <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
+        </button>
+        <p>{{ post.likes }}</p>
+      </div>
     </div>
   </div>
   <div v-else>
@@ -35,9 +37,12 @@ export default {
       return '/res/images/user.png';
     }
   },
-  methods:{
-    IncraeseLike(post){
-      post.likes  = post.likes +1;
+  methods: {
+    incrementLike(post) {
+      post.likes = post.likes + 1;
+    },
+    setDefaultImage(event) {
+      event.target.src = this.defaultImage;
     }
   }
 
@@ -45,21 +50,21 @@ export default {
 </script>
 
 <style scoped>
-.like{
-  background: none;
-  border: none;
-}
-.postcontainer{
+
+
+.postcontainer {
   background-color: #86A789;
   border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 7px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
   padding: 10px;
 }
+
 .post.content {
   margin: 5px;
+  text-align: left;
 }
 
 .post.content img {
@@ -71,7 +76,7 @@ export default {
   padding-bottom: 10px;
 }
 
-.post.heading{
+.post.heading {
   padding: 5px 5px 5px;
   border-bottom: 1px solid #adadad;
   margin-bottom: 10px;
@@ -80,6 +85,7 @@ export default {
   align-items: center;
 
 }
+
 .post.heading > img {
   width: 50px;
   height: 50px;
@@ -88,14 +94,14 @@ export default {
 
 }
 
-.post.footer{
+.post.footer {
   margin-top: 10px;
   padding: 10px 10px 10px;
   display: flex;
   border-top: 1px solid #adadad;
 }
 
-.post.heading p.date{
+.post.heading p.date {
   flex: 1;
   text-align: right;
   margin: 0;
@@ -104,5 +110,28 @@ export default {
 
 .post.heading ~ .post.content p {
   margin: 0;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.like-container p {
+  margin: 2px 0 0 7px;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 </style>
