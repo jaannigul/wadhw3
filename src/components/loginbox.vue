@@ -7,7 +7,14 @@
            </div>
            <div class="form-row">
              <h3>Password</h3>
-             <input type="password" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
+             
+             <!--
+                The version where password is NOT visible 
+                <input type="password" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
+             -->
+
+             <input type="text" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
+
            </div>
            <div class="error-message" v-if="errorMsg">{{ errorMsg }}</div>
            <button v-on:click="submitForm" type="submit" class="btn btn-primary">Signup</button>
