@@ -8,7 +8,7 @@ const routes = [{
         component: postView,
     },
     {
-        path: "/register",
+        path: "/",
         name: "registerView",
         component: registerView,
     }
