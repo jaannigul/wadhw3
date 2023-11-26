@@ -10,7 +10,7 @@
       <img v-if="post.image_url" :src="post.image_url" alt="Post image" />
     </div>
     <div class="post footer">
-      <button class = "like" @click="IncraeseLike(post)">
+      <button class="like" @click="IncraeseLike(post)">
         <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
       </button>
       <p>{{ post.likes}}</p>

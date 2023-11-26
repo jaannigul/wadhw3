@@ -4,13 +4,13 @@
   <div id="app" class="app-container">
     <getHeader />
 
-    <div class = container>
-      <div class = "column edge">
+    <div class=container>
+      <div class="column edge">
       </div>
-      <div class = "column center">
+      <div class="column center">
         <RouterView/>
       </div>
-      <div class = "column edge">
+      <div class="column edge">
       </div>
     </div>
 
