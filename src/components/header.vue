@@ -2,8 +2,8 @@
 <header class="header">
     
     <ul class = 'nav'>
-        <li><router-link to="/"  class="nav-link">Register</router-link></li>
-        <li><router-link to="/post"  class="nav-link">Posts</router-link></li>
+        <li><router-link to="/post"  class="nav-link">Home</router-link></li>
+        <li><router-link to="/aboutView"  class="nav-link">Contacts</router-link></li>
     </ul>
 
 </header>

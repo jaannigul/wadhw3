@@ -6,7 +6,7 @@
  
  <script>
   //import { mapState } from 'vuex';
-  import loginBox from '@/components/loginbox.vue';
+  import loginBox from '@/components/signup.vue';
 
   export default {
     name: 'registerView',

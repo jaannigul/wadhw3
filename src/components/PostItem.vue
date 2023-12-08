@@ -1,5 +1,5 @@
 <template>
-  <div v-if="post" class="postcontainer">
+  <div v-if="post" class="postcontainer" @click="toCertainPost">
     <div class="post heading">
       <img :src="userPicture" @error="setDefaultImage" class="pfp" alt="pfp"/>
       <h4 class="username">{{ post.username }}</h4>
@@ -10,12 +10,7 @@
       <img v-if="post.image_url" :src="post.image_url" alt="Post image"/>
     </div>
     <div class="post footer">
-      <div class=" like-container">
-        <button class="like" @click="incrementLike(post)">
-          <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
-        </button>
-        <p>{{ post.likes }}</p>
-      </div>
+      
     </div>
   </div>
   <div v-else>
@@ -38,9 +33,10 @@ export default {
     }
   },
   methods: {
-    incrementLike(post) {
-      post.likes = post.likes + 1;
+    toCertainPost: function(){
+      this.$router.push("/certainPostView")
     },
+    
     setDefaultImage(event) {
       event.target.src = this.defaultImage;
     }

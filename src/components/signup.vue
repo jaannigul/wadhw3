@@ -1,5 +1,6 @@
 <template>
     <div class="login_box" id="login_box">
+      <label>Register</label>
         <form>
            <div class="form-row">
              <h3>Email</h3>
@@ -7,17 +8,11 @@
            </div>
            <div class="form-row">
              <h3>Password</h3>
-             
-             <!--
-                The version where password is NOT visible 
-                <input type="password" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
-             -->
-
              <input type="text" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
 
            </div>
            <div class="error-message" v-if="errorMsg">{{ errorMsg }}</div>
-           <button v-on:click="submitForm" type="submit" class="btn btn-primary">Signup</button>
+           <button v-on:click="submitForm" type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 </template>
@@ -70,21 +65,22 @@ export default {
 
 
 <style scoped>
- .login_box {
-  font-size: 25px;
-  border: 2px solid;
-  padding-bottom: 30px;
-  padding-top: 40px;
-  background-color: #86A789;
-  margin-top: 15ch;
-  margin-bottom: 15ch;
+label{
+  font-size: 30px;
   text-align: center;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
+  color: rgb(8, 110, 110);
+}
+ .login_box {
+  max-width: 420px;
+  height: 435px;
+  margin: 30px auto;
+  background-color: #86A789;
+  padding: 40px;
+  border-radius: 10px;
  }
  
  .form-row {
+  padding-top: 25px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -97,7 +93,9 @@ export default {
 }
  
  .login_box button {
-  margin-top: 30px;
+  background: rgb(8, 110, 110);
+  color: white;
+  margin-top: 80px;
   width: 30%;
   border-radius: 15px;
  }

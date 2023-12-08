@@ -8,13 +8,8 @@ export default createStore({
     mutations: {
         SET_POSTS(state, posts) {
             state.posts = posts;
-        },
-        DeleteLikes: state =>{
-            state.posts.forEach(post =>{
-                post.likes = 0;
-            }
-            )
         }
+        
     },
     actions: {
         async fetchPosts({ commit }) {

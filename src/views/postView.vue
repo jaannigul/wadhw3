@@ -1,8 +1,13 @@
 <template>
   <div>
+    <button @click="logout">Logout</button>
     <post-item v-for="post in posts" :key="post.id" :post="post" />
   </div>
-  <button v-on:click="DeleteLike" class="delete"> Delete Likes </button>
+  <div class="button-container">
+    <button @click="addPost">Add post</button>
+    
+    <button @click="deleteAll">Delete all</button>
+  </div>
 </template>
 
 <script>
@@ -21,6 +26,15 @@ export default {
     this.$store.dispatch('fetchPosts');
   },
   methods: {
+    deleteAll: function(){
+      this.$router.push("/certainPostView")
+    },
+    addPost: function(){
+      this.$router.push("/addPostView")
+    },
+    logout: function(){
+      this.$router.push("/")
+    },
     DeleteLike: function(){
       this.$store.commit("DeleteLikes")
     }
@@ -28,14 +42,21 @@ export default {
 };
 </script>
 <style scoped>
-.delete{
+.button-container{
+  display: flex; /* Use flexbox to create a horizontal layout */
+  justify-content: space-between; 
+}
+
+button{
   border-radius: 30px;
   background-color: #86A789;
   border: none;
   width: 100px;
-  height: 50px;
+  height: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.delete:hover{
+button:hover{
   background-color: #a1efa8;
 }
 </style>
