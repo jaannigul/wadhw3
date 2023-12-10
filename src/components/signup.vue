@@ -9,7 +9,6 @@
            <div class="form-row">
              <h3>Password</h3>
              <input type="text" id="password" name="Password" class="form-control" placeholder="Password" v-model="password">
-
            </div>
            <div class="error-message" v-if="errorMsg">{{ errorMsg }}</div>
            <button v-on:click="submitForm" type="submit" class="btn btn-primary">Register</button>
@@ -99,7 +98,7 @@ label{
   width: 30%;
   border-radius: 15px;
  }
-  .login_box h3{
+.login_box h3{
   width: 40%;
   text-align: right;  
 }
