@@ -33,7 +33,18 @@ export default {
       this.$router.push("/addPostView")
     },
     logout: function(){
-      this.$router.push("/")
+      fetch('http://localhost:3000/auth/logout', {
+        method: 'GET',
+        credentials: 'include'
+      })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data.Msg);
+            this.$router.push('/'); // redirect to login page
+          })
+          .catch(error => {
+            console.error('Logout failed:', error);
+          });
     },
     DeleteLike: function(){
       this.$store.commit("DeleteLikes")
