@@ -3,7 +3,7 @@
     <label class="pealkiri">Add post</label>
     <div class="body">
         <h3>Body</h3>
-        <textarea></textarea>
+        <textarea required v-model="post.content"></textarea>
     </div>
     <div class="buttons">
         <button @click="addPost" class="nupp">Add post</button>
@@ -13,13 +13,42 @@
 <script>
 export default {
       name: 'addPostView',
-      
+      data() {
+       return {
+          post: {
+            content: "",
+          },
+        };
+      },
       computed: {},
       created() {},
       methods: {
-        addPost: function(){
-            this.$router.push("/post")
-        }
+      addPost: function(){
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+        var day = currentDate.getDate().toString().padStart(2, '0');
+        var formattedDate = `${year}-${month}-${day}`;
+      var data = {
+        content: this.post.content,
+        create_time: formattedDate,
+      };
+      fetch("http://localhost:3000/api/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.$router.push("/post");
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error");
+      });
+    }
       }
       
     }

@@ -2,7 +2,6 @@
   <div v-if="post" class="postcontainer" @click="toCertainPost">
     <div class="post heading">
       <img :src="userPicture" @error="setDefaultImage" class="pfp" alt="pfp"/>
-      <h4 class="username">{{ post.username }}</h4>
       <p class="date">{{ post.create_time }}</p>
     </div>
     <div class="post content">

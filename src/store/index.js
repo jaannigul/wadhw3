@@ -9,12 +9,12 @@ export default createStore({
         SET_POSTS(state, posts) {
             state.posts = posts;
         }
-        
+
     },
     actions: {
         async fetchPosts({ commit }) {
             try {
-                let response = await fetch("./posts.json");
+                let response = await fetch("http://localhost:3000/auth/posts");
                 console.log("fetching done")
                 let data = await response.json();
                 console.log(data);
