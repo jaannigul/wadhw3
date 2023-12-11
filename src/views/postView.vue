@@ -27,7 +27,19 @@ export default {
   },
   methods: {
     deleteAll: function(){
-      this.$router.push("/certainPostView")
+      fetch('http://localhost:3000/auth/posts', {
+        method: 'DELETE',
+        credentials: 'include'
+      })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data.Msg);
+            //this.$router.push('/post'); 
+            location.reload();
+          })
+          .catch(error => {
+            console.error('Deleting failed:', error);
+          });
     },
     addPost: function(){
       this.$router.push("/addPostView")

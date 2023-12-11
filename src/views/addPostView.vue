@@ -33,7 +33,7 @@ export default {
         content: this.post.content,
         create_time: formattedDate,
       };
-      fetch("http://localhost:3000/api/posts", {
+      fetch("http://localhost:3000/auth/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
