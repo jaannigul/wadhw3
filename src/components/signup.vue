@@ -54,6 +54,9 @@ export default {
             .then((data) => {
               console.log(data);
               this.$router.push('/post'); //If there is no error, redirect to the post page
+              // fixes displaying sensitive info in the url
+              this.$router.replace('');
+              // https://stackoverflow.com/questions/45234567/removing-query-string-parameter-from-url
             })
             .catch((e) => {
               console.log(e);

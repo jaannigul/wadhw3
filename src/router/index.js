@@ -6,15 +6,20 @@ import aboutView from "@/views/aboutView.vue";
 import addPostView from "@/views/addPostView.vue";
 import certainPostView from "@/views/certainPostView.vue";
 import auth from "../auth";
+const requireAuth = async (to, from, next) => {//checks if the user is authenticated
+    let authResult = await auth.authenticated();
+    if (!authResult) {
+        next('/');
+    } else {
+        if (from === '/') next('/posts')
+        next();
+    }
+};
 const routes = [{
         path: "/post",
         name: "postView",
         component: postView,
-        beforeEnter: async(to,from,next) =>{
-            let authResult= await auth.authenticated();
-            if (!authResult) next('/');
-            else next();
-        }
+        beforeEnter: requireAuth,
     },
     {//does not need auth
         path: "/registerView",
@@ -35,21 +40,13 @@ const routes = [{
         path: "/addPostView",
         name: "addPostView",
         component: addPostView,
-        beforeEnter: async(to,from,next) =>{
-            let authResult= await auth.authenticated();
-            if (!authResult) next('/');
-            else next();
-        }
+        beforeEnter: requireAuth,
     },
     {
         path: "/certainPostView",
         name: "certainPostView",
         component: certainPostView,
-        beforeEnter: async(to,from,next) =>{
-            let authResult= await auth.authenticated();
-            if (!authResult) next('/');
-            else next();
-        }
+        beforeEnter: requireAuth,
     }
 ];
 

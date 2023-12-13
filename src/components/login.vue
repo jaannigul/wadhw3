@@ -14,6 +14,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: 'loginComp',
   data: function () {
@@ -25,8 +26,8 @@ export default {
   props: {},
   computed: {},
   methods: {
-    logIn() {
-      console.log("")
+    logIn(event) {
+      event.preventDefault(); //this fixes the 2 time login bug (prevent page reload)
       var data = {
         email: this.email,
         password: this.password
@@ -37,17 +38,29 @@ export default {
           "Content-Type": "application/json",
         },
         credentials: 'include', //  Don't forget to specify this if you need cookies
-        body: JSON.stringify(data), // sends the data to the server
+        body: JSON.stringify(data), // sends the data to the server (server.js)
       })
-          .then((response) => response.json())
+          .then((response) => {
+            response.json()
+            if (response.status === 401){ //response for unauthenticated
+              console.log("The password entered is incorrect");
+              this.resetPasswordField();
+            }
+          })
           .then((data) => {
             console.log(data);
             this.$router.push("/post");
-            //location.assign("/post"); //redirect to posts
           })
           .catch((e) => {
             console.log(e);
           });
+    },
+    async resetPasswordField(){
+      this.password = '';
+      await this.$nextTick()
+          .then(() => {
+            console.log("Reset the password field");
+          })
     }
   }
 }
