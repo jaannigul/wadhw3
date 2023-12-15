@@ -3,27 +3,36 @@
         <label class="pealkiri">A post</label>
         <div class="body">
             <h3>Body</h3>
-            <textarea></textarea>
+            <textarea required v-model="post.content"></textarea>
         </div>
         <div class="buttons">
-            <button @click="Update" class="nupud">Update</button>
-            <button class="nupud">Delete</button>
+            <button @click="updatePost" class="nupud">Update</button>
+            <button @click="deletePost" class="nupud">Delete</button> 
         </div>
     </div>
     </template>
     <script>
     export default {
-          name: 'certainPostView',
-          
-          computed: {},
-          created() {},
-          methods: {
-            Update: function(){
-                this.$router.push("/post")
-            }
-          }
-          
-        }
+        name: 'certainPostView',
+        computed: {
+          post() {
+            return this.$store.getters.getPostById(this.$store.state.currentPostId) || { content: ''}
+          },
+        },
+        methods: {
+          updatePost() {
+            this.$store.dispatch('updatePost', {
+              id: this.post.id,
+              content: this.post.content,
+            });
+            this.$router.push('/post');
+          },
+          deletePost() {
+              this.$store.dispatch('deletePost', this.post.id);
+              this.$router.push('/post');
+          },
+        },
+      }
         
     </script>
     <style>

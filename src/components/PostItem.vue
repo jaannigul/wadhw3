@@ -33,9 +33,13 @@ export default {
   },
   methods: {
     toCertainPost: function(){
-      this.$router.push("/certainPostView")
-    },
-    
+        if (this.post && this.post.id) {
+          this.$store.dispatch('setCurrentPostId', this.post.id);
+          this.$router.push({ name: 'certainPostView' });
+        } else {
+          console.error('Post or post ID is undefined');
+        }
+      },
     setDefaultImage(event) {
       event.target.src = this.defaultImage;
     }
